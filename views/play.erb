@@ -1,4 +1,7 @@
 <div>
-<%= "#{@name1} vs #{@name2}" %>
+  <%= "#{@name1} vs #{@name2}" %>
 </div>
 <div><%= @name2.to_s %>: 50/50 HP</div>
+<div>
+  <a href='/attack'>Attack <%= @name2 %></a>
+</div>

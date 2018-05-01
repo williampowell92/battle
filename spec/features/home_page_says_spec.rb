@@ -1,6 +1,6 @@
 feature "home page" do
   before do
-    visit('/')
+    visit('/names')
   end
   scenario "expects page to post the names given in the form to the" do
     fill_in('name1', with: 'John')

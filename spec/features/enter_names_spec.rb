@@ -1,11 +1,6 @@
 feature "home page" do
-  before do
-    visit('/')
-  end
   scenario "expects page to post the names given in the form to the" do
-    fill_in('name1', with: 'John')
-    fill_in('name2', with: 'Will')
-    click_button('Sumbit Players')
+    sign_in_and_play
     expect(page).to have_content('John vs Will')
   end
 end

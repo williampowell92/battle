@@ -1,10 +1,12 @@
 require 'sinatra/base'
 require_relative 'lib/player.rb'
 
-$player1
 
 class Battle < Sinatra::Base
-  enable :sessions
+  configure do
+   enable :sessions
+   set :session_secret, "My session secret"
+ end
 
   get '/' do
     erb(:index)
